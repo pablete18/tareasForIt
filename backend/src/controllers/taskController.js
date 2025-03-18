@@ -1,7 +1,13 @@
 export const taskController = {
     list : (req,res)=>{
+
+        res.send("exito")
         
     },
+    detail:(req,res)=>{
+
+    },
+
     create : (req,res)=>{
 
     },
