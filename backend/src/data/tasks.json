@@ -1,3 +1,21 @@
 [
-    {}
+    {
+        "id":"1",
+        "title":"tarea de prueba json",
+        "description":"primera tarea de prueba",
+        "completed":false
+    },
+    {
+        "id":"2",
+        "title":"tarea para hacer",
+        "description":"esta ela verdadera tarea",
+        "completed":true
+    },
+   {
+      "id": "7f7b5697-c4b1-40fd-97a9-33b5dcbff373",
+      "title": "tarea",
+      "description": "editando tarea",
+      "completed": false,
+      "createdAt": "2025-03-20T00:51:06.948Z"
+   }
 ]

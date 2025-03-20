@@ -6,7 +6,6 @@ const router = express.Router()
 // llega '/api/tasks
 
 router.get('', taskController.list)
-router.get('/:id',taskController.detail)
 router.post('',taskController.create)
 router.put('/:id',taskController.update)
 router.delete('/:id',taskController.destroy)
