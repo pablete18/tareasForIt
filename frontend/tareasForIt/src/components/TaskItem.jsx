@@ -1,4 +1,4 @@
-export const TaskItem = ({ task }) => {
+const TaskItem = ({ task }) => {
   return (
     <div>
       <h3>{task.title}</h3>
@@ -9,3 +9,5 @@ export const TaskItem = ({ task }) => {
     </div>
   );
 };
+
+export default TaskItem
