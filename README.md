@@ -20,17 +20,17 @@ las apis son consumidas desde el backend para su posterior utilizacion usando FE
 
 *************************
 adjunto fotos: 
-******* tarea renderizada
+******* tarea renderizada*********
 ![alt text](image.png)
 
-****** formulario creacion 
+****** formulario creacion ***********
 ![alt text](image-1.png)
-*******renderizacion nueva tarea 
+*******renderizacion nueva tarea *********
 ![alt text](image-2.png)
 
-******* formulario de edicion
+******* formulario de edicion ********
 ![alt text](image-3.png)
-******** renderizacion tarea editada
+******** renderizacion tarea editada **********
 ![alt text](image-4.png)
 
 
