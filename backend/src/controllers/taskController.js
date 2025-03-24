@@ -15,9 +15,9 @@ export const taskController = {
         
     },
     create : async(req,res)=>{
-        try {
+        try {console.log(req.body)
             const tasks = leerJson('tasks.json')           
-
+            
             const data = req.body
 
             let newTask = new Task(data)
