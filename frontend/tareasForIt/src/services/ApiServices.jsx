@@ -7,7 +7,9 @@ export const getTask= async()=>{
         if(!response.ok){
             throw new Error('Error al obtener las tareas')
         }
-        return await response.json()
+        const result = await response.json();
+
+        return Array.isArray(result.data) ? result.data : [];
 
     } catch (error) {
         console.log(error)
@@ -19,13 +21,16 @@ export const createTask = async(task)=>{
     try {
         const response = await fetch(`${URL}`,{
             method : 'POST',
-            header : {'Content Type' : 'application/json'},
+            headers : {'Content-Type' : 'application/json'},
             body: JSON.stringify(task)
         });
         if (!response.ok) {
             throw new Error("Error al crear tarea");            
         }
-        return await response.json()
+        const result = await response.json();
+        console.log(response);
+        
+        return result
 
     } catch (error) {
         console.log(error)
@@ -34,16 +39,19 @@ export const createTask = async(task)=>{
 }
 
 export const updateTask= async(task)=> {
-    try {
+
+    try {        
         const response = await fetch(`${URL}/${task.id}`,{
             method : "PUT",
-            headers :{"Content type":"application/json"},
+            headers :{"Content-type":"application/json"},
             body : JSON.stringify(task)
         })
         if(!response.ok) {
             throw new Error("Error al editar la tarea");
         }
-        return await response.json()
+        const result = await response.json();
+
+        return result
         
     } catch (error) {       
         console.log(error)
@@ -54,7 +62,7 @@ export const deleteTask = async(id)=>{
     try {
         const response = await fetch(`${URL}/${id}`,{
             method : "DELETE",
-            headers :{ "Content type":"application/json"}
+            headers :{ "Content-type":"application/json"}
         })
         if (!response.ok){
             throw new Error("Error al eliminar la tarea")            
