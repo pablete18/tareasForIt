@@ -6,10 +6,11 @@ const app = express()
 
 const PORT = 3000
 
-app.use(cors())
 app.use(express.json());
+app.use(cors())
 
-app.use(express.urlencoded({extended : false}))
+
+app.use(express.urlencoded({extended : true}))
 
 app.use('/api/tasks', router)
 
